@@ -1,0 +1,12 @@
+---
+- hosts: server-node
+  remote_user: ansible
+  tasks:
+    # Install prerequisites
+    - include: tasks/prerequisites.yml
+    
+    # Install MongoDB
+    - include tasks/mongodb.yml
+
+    # Install Node.js
+    - include tasks/nodejs.yml

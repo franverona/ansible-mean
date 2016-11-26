@@ -1,0 +1,27 @@
+---
+# File nodejs.yml
+#
+# Description: Install Node.js
+#
+# OS Family: Ubuntu
+
+- name: Node.js | Add repository
+  command: curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+
+- name: Node.js | Install Node.js
+  apt:
+    name: {{ item }}
+    state: present
+    update_cache: yes
+    with_items:
+      - build-essential
+      - nodejs
+
+- name: Node.js | Install bower and gulp globally
+  npm:
+    name: {{ item }}
+    state: present
+    global: yes,
+    with_items:
+      - bower
+      - gulp
