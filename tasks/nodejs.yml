@@ -8,14 +8,14 @@
 - name: Node.js | Get installation script
   get_url: 
     url: http://deb.nodesource.com/setup_6.x
-    dest: {{ temp_folder }}/nodejs.sh
+    dest: "{{ temp_folder }}/nodejs.sh"
 
 - name: Node.js | Execute installation script
-  command: sh {{ temp_folder }}/nodejs.sh
+  command: sh "{{ temp_folder }}/nodejs.sh"
 
 - name: Node.js | Remove installation script
   file: 
-    path: {{ temp_folder }}/nodejs.sh
+    path: "{{ temp_folder }}/nodejs.sh"
     state: absent
 
 - name: Node.js | Install Node.js
