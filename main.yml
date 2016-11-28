@@ -1,6 +1,8 @@
 ---
 - hosts: server-node
   remote_user: ansible
+  vars:
+    temp_folder: /tmp
   tasks:
     # Install prerequisites
     - include: tasks/prerequisites.yml
