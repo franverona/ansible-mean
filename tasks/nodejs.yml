@@ -11,7 +11,7 @@
     dest: "{{ temp_folder }}/nodejs.sh"
 
 - name: Node.js | Execute installation script
-  command: sh "{{ temp_folder }}/nodejs.sh"
+  shell: "{{ temp_folder }}/nodejs.sh"
 
 - name: Node.js | Remove installation script
   file:
