@@ -1,6 +1,7 @@
 ---
-- hosts: server-node
+- hosts: nodes
   remote_user: ansible
+  become_user: yes
   vars:
     temp_folder: /tmp
   tasks:
