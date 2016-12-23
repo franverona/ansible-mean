@@ -10,6 +10,11 @@
     url: "http://deb.nodesource.com/setup_6.x"
     dest: "{{ temp_folder }}/nodejs.sh"
 
+- name: Node.js | Set execution right to script
+  file:
+    path: "{{ temp_folder }}/nodejs.sh"
+    mode: 764
+
 - name: Node.js | Execute installation script
   shell: "{{ temp_folder }}/nodejs.sh"
 
