@@ -13,7 +13,7 @@
 - name: Node.js | Set execution right to script
   file:
     path: "{{ temp_folder }}/nodejs.sh"
-    mode: 764
+    mode: "u+x"
 
 - name: Node.js | Execute installation script
   shell: "{{ temp_folder }}/nodejs.sh"
