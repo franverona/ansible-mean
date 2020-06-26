@@ -5,7 +5,7 @@ Ansible playbook to install MEAN stack on Ubuntu
 To execute it, type on terminal:
 
 ```
-ansible-playbook main.yml
+ansible-playbook -i ansible_hosts main.yml
 ```
 
 Related links:
